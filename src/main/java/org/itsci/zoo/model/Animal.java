@@ -18,37 +18,37 @@ public class Animal {
 
     @NotNull
     @Pattern(regexp="^A[0-9]{4}")
-    @Column(length = 5, nullable = false, unique = true)
+    @Column(name = "animalID",length = 5, nullable = false, unique = true)
     @NotNull
     private String animalID;
 
     @NotNull
-    @Column(length = 60)
+    @Column(name = "nameTH",length = 60)
     private String nameTH;
 
     @NotNull
-    @Column(length = 60)
+    @Column(name = "nameEN",length = 60)
     private String nameEN;
 
     @NotNull
-    @Column(length = 100)
+    @Column(name = "nameSC",length = 100)
     private String nameSC;
 
     @NotNull
-    @Column(columnDefinition="TEXT")
+    @Column(name = "details",columnDefinition="TEXT")
     private String details;
 
     @NotNull
-    @Column(length = 200)
+    @Column(name = "residence",length = 200)
     private String residence;
 
     @NotNull
-    @Column(length = 100)
+    @Column(name = "food",length = 100)
     private String food;
 
 
     @ManyToOne
-    @JoinColumn(name = "typeID")
+    @JoinColumn(name = "animalType_id")
     private AnimalType animalType;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
