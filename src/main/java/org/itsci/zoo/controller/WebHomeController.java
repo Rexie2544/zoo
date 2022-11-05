@@ -1,4 +1,4 @@
-package org.itsci.shop.controller;
+package org.itsci.zoo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

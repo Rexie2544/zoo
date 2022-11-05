@@ -11,3 +11,10 @@ Chiang Mai Zoo
 
 
 # [หน้าที่]
+
+
+# insert SQL Animal
+
+# insert SQL AnimalType
+
+# insert SQL Tram
