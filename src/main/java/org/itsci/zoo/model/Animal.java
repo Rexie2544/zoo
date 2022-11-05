@@ -8,7 +8,7 @@ import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
-@Table(name = "Animals")
+@Table(name = "animals")
 public class Animal {
     @Id
     @Column(name = "id", nullable = false)
@@ -17,50 +17,54 @@ public class Animal {
     int id;
 
     @NotNull
-    @Pattern(regexp="^PD[0-9]{4}")
-    @Column(length = 10, nullable = false, unique = true)
+    @Pattern(regexp="^A[0-9]{4}")
+    @Column(length = 5, nullable = false, unique = true)
     @NotNull
-    private String code;
+    private String animalID;
 
     @NotNull
-    private String name;
+    @Column(length = 60)
+    private String nameTH;
 
     @NotNull
-    private double price;
+    @Column(length = 60)
+    private String nameEN;
 
+    @NotNull
+    @Column(length = 100)
+    private String nameSC;
+
+    @NotNull
     @Column(columnDefinition="TEXT")
-    private String description;
+    private String details;
+
+    @NotNull
+    @Column(length = 200)
+    private String residence;
+
+    @NotNull
+    @Column(length = 100)
+    private String food;
+
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
+    @JoinColumn(name = "typeID")
+    private AnimalType animalType;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-    @JoinTable(name = "product_shop",
-            joinColumns = { @JoinColumn(name = "product_id") },
-            inverseJoinColumns = { @JoinColumn(name = "shop_id") })
-    private List<Shop> shops;
+    @JoinTable(name = "animals_tram",
+            joinColumns = { @JoinColumn(name = "animals_id") },
+            inverseJoinColumns = { @JoinColumn(name = "trams_id") })
+    private List<Tram> trams;
 
-    public void fill(Animal product) {
-        this.code = product.getCode();
-        this.name = product.getName();
-        this.description = product.getDescription();
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
-    public List<Shop> getShops() {
-        return shops;
-    }
-
-    public void setShops(List<Shop> shops) {
-        this.shops = shops;
+    public void fill(Animal animals) {
+        this.animalID = animals.getAnimalID();
+        this.nameTH = animals.getNameTH();
+        this.nameEN = animals.getNameEN();
+        this.nameSC = animals.getNameSC();
+        this.details = animals.getDetails();
+        this.residence = animals.getResidence();
+        this.food = animals.getFood();
     }
 
     public int getId() {
@@ -71,36 +75,76 @@ public class Animal {
         this.id = id;
     }
 
-    public String getCode() {
-        return code;
+    public String getAnimalID() {
+        return animalID;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setAnimalID(String animalID) {
+        this.animalID = animalID;
     }
 
-    public String getName() {
-        return name;
+    public String getNameTH() {
+        return nameTH;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameTH(String nameTH) {
+        this.nameTH = nameTH;
     }
 
-    public double getPrice() {
-        return price;
+    public String getNameEN() {
+        return nameEN;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setNameEN(String nameEN) {
+        this.nameEN = nameEN;
     }
 
-    public String getDescription() {
-        return description;
+    public String getNameSC() {
+        return nameSC;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setNameSC(String nameSC) {
+        this.nameSC = nameSC;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
+    }
+
+    public String getResidence() {
+        return residence;
+    }
+
+    public void setResidence(String residence) {
+        this.residence = residence;
+    }
+
+    public String getFood() {
+        return food;
+    }
+
+    public void setFood(String food) {
+        this.food = food;
+    }
+
+    public AnimalType getAnimalType() {
+        return animalType;
+    }
+
+    public void setAnimalType(AnimalType animalType) {
+        this.animalType = animalType;
+    }
+
+    public List<Tram> getTrams() {
+        return trams;
+    }
+
+    public void setTrams(List<Tram> trams) {
+        this.trams = trams;
     }
 }
 
