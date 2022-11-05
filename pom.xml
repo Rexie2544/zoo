@@ -93,7 +93,6 @@
             <artifactId>spring-orm</artifactId>
             <version>${springframework.version}</version>
         </dependency>
-
         <!--JSTL Dependency -->
         <dependency>
             <groupId>javax.servlet.jsp.jstl</groupId>
