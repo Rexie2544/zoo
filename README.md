@@ -19,4 +19,11 @@ Chiang Mai Zoo
 
 # insert SQL AnimalType
 
+[//]: # (insert into animaltypes value&#40;1,'สัตว์เลี้ยงลูกด้วยนม',50,'AT101'&#41;;)
+[//]: # (insert into animaltypes value&#40;2,'สัตว์เลื้อยคลาน',40,'AT102'&#41;;)
+[//]: # (insert into animaltypes value&#40;3,'สัตว์ปีก',50,'AT103'&#41;;)
+[//]: # (insert into animaltypes value&#40;4,'สัตว์น้ำ',20,'AT104'&#41;;)
+[//]: # (insert into animaltypes value&#40;5,'สะเทินน้ำสะเทินบก',4,'AT105'&#41;;)
+[//]: # (insert into animaltypes value&#40;6,'สัตว์ไม่มีกระดูกสันหลัง',20,'AT106'&#41;;)
+[//]: # (SELECT * FROM animaltypes;)
 # insert SQL Tram
