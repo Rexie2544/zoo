@@ -37,4 +37,67 @@ public class Tram {
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "trams")
     private List<Animal> animals;
+
+    public void fill(Tram trams) {
+        this.tramID = trams.getTramID();
+        this.route = trams.getRoute();
+        this.timef = trams.getTimef();
+        this.timel = trams.getTimel();
+        this.parking = trams.getParking();
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTramID() {
+        return tramID;
+    }
+
+    public void setTramID(String tramID) {
+        this.tramID = tramID;
+    }
+
+    public String getRoute() {
+        return route;
+    }
+
+    public void setRoute(String route) {
+        this.route = route;
+    }
+
+    public String getTimef() {
+        return timef;
+    }
+
+    public void setTimef(String timef) {
+        this.timef = timef;
+    }
+
+    public String getTimel() {
+        return timel;
+    }
+
+    public void setTimel(String timel) {
+        this.timel = timel;
+    }
+
+    public String getParking() {
+        return parking;
+    }
+
+    public void setParking(String parking) {
+        this.parking = parking;
+    }
+
+    public List<Animal> getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(List<Animal> animals) {
+        this.animals = animals;
+    }
 }

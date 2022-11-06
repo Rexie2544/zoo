@@ -12,23 +12,19 @@ public class AnimalType {
     @GenericGenerator(name = "increment", strategy = "increment")
     int id;
 
-    @Column(name = "typeID",length = 50)
+    @Column(name = "typeID",length = 5)
     private String typeID;
 
     @Column(name = "nameType",length = 60)
     private String nameType;
 
-    @Column(name = "exStatus",length = 60)
-    private String exStatus;
-
-    @Column(name = "reserStatus",length = 100)
-    private String reserStatus;
+    @Column(name = "qty",length = 3)
+    private int qty;
 
     public void fill(AnimalType animaltypes) {
         this.typeID = animaltypes.getTypeID();
         this.nameType = animaltypes.getNameType();
-        this.exStatus = animaltypes.getExStatus();
-        this.reserStatus = animaltypes.getReserStatus();
+        this.qty = animaltypes.getQty();
     }
     public int getId() {
         return id;
@@ -54,19 +50,10 @@ public class AnimalType {
         this.nameType = nameType;
     }
 
-    public String getExStatus() {
-        return exStatus;
+    public int getQty() {
+        return qty;
     }
-
-    public void setExStatus(String exStatus) {
-        this.exStatus = exStatus;
-    }
-
-    public String getReserStatus() {
-        return reserStatus;
-    }
-
-    public void setReserStatus(String reserStatus) {
-        this.reserStatus = reserStatus;
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 }
