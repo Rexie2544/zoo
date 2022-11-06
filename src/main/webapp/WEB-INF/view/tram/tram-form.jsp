@@ -13,7 +13,7 @@
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
     <div id="container">
         <i>กรอกข้อมูลในฟอร์ม. เครื่องหมายดอกจัน (*) หมายถึงห้ามว่าง</i><br><br>
-        <form:form action="${pageContext.request.contextPath}/shop/save " modelAttribute="shop" method="POST">
+        <form:form action="${pageContext.request.contextPath}/tram/save " modelAttribute="tram" method="POST">
             <form:hidden path="id"/>
             <table>
                 <colgroup>
@@ -22,40 +22,33 @@
                 </colgroup>
                 <tbody>
                 <tr>
-                    <td><label>รหัสร้านค้า:</label></td>
-                    <td><form:input path="code"/>
-                        <form:errors path="code" cssClass="error" style="color:red"/>
+                    <td><label>รหัสรถราง</label></td>
+                    <td><form:input path="tramID"/>
+                        <form:errors path="tramID" cssClass="error" style="color:red"/>
                     </td>
                 </tr>
                 <tr>
-                    <td><label>ชื่อร้านค้า:</label></td>
-                    <td><form:input path="name"/>
-                        <form:errors path="name" cssClass="error" style="color:red"/>
+                    <td><label>จุดจอดรถ</label></td>
+                    <td><form:input path="parking"/>
+                        <form:errors path="parking" cssClass="error" style="color:red"/>
                     </td>
                 </tr>
                 <tr>
-                    <td><label>ชื่อเจ้าของร้าน:</label></td>
-                    <td><form:input path="owner"/>
-                        <form:errors path="owner" cssClass="error" style="color:red"/>
+                    <td><label>จุดที่ส่ง</label></td>
+                    <td><form:input path="route"/>
+                        <form:errors path="route" cssClass="error" style="color:red"/>
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Latitude:</label></td>
-                    <td><form:input path="latitude" cssClass="number"/>
-                        <form:errors path="latitude" cssClass="error" style="color:red"/>
+                    <td><label>เวลาเริ่มทำงาน</label></td>
+                    <td><form:input path="timef" cssClass="number"/>
+                        <form:errors path="timef" cssClass="error" style="color:red"/>
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Longitude:</label></td>
-                    <td><form:input path="longitude" cssClass="number"/>
-                        <form:errors path="longitude" cssClass="error" style="color:red"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td><label>ที่อยุ่:</label></td>
-                    <td><form:textarea path="address"
-                                       cols="50" rows="5"></form:textarea>
-                        <form:errors path="address" cssClass="error"/>
+                    <td><label>เวลาเลิกงาน</label></td>
+                    <td><form:input path="timel" cssClass="number"/>
+                        <form:errors path="timel" cssClass="error" style="color:red"/>
                     </td>
                 </tr>
                 <tr>
@@ -63,18 +56,18 @@
                     <td>
                         <input type="submit" value="บันทึก" class="save-button"/>
                         <input type="button" value="ลบ"
-                               onclick="if((confirm('คูณแน่ใจหรือว่าต้องการลบสินค้านี้ ?'))) {
-                                       window.location.href='${pageContext.request.contextPath}/shop/${shop.id}/delete'; return false; }"
+                               onclick="if((confirm('คูณแน่ใจหรือว่าต้องการลบรถรางนี้ ?'))) {
+                                       window.location.href='${pageContext.request.contextPath}/tram/${tram.id}/delete'; return false; }"
                                class="cancel-button"
                         />
                         <input type="button" value="ยกเลิก"
-                               onclick="window.location.href='${pageContext.request.contextPath}/shop/list'; return false;"
+                               onclick="window.location.href='${pageContext.request.contextPath}/tram/list'; return false;"
                                class="cancel-button"
                         />
-                        <c:if test="${shop.id > 0}">
+                        <c:if test="${tram.id > 0}">
                             <input type="button" value="แสดงร้านค้า"
                                    onclick="window.location.href=
-                                           '${pageContext.request.contextPath}/shop/${shop.id}/view-products';
+                                           '${pageContext.request.contextPath}/tram/${tram.id}/view-animals';
                                            return false;"
                                    class="add-button"
                             />
@@ -87,5 +80,6 @@
     </div>
 </div>
 <jsp:include page="/WEB-INF/view/layouts/footer.jsp"/>
+
 </body>
 </html>

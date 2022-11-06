@@ -47,7 +47,7 @@ public class TramDaolmal implements TramDao{
         Query<Animal> query = session.createQuery("select s.animals from Tram s where s.id=:id");
         query.setParameter("id", id);
         List<Animal> animaltram = query.getResultList();
-        query = session.createQuery("from Tram");
+        query = session.createQuery("from Animal");
         List<Animal> allanimals = query.getResultList();
         allanimals.removeAll(animaltram);
         return allanimals;

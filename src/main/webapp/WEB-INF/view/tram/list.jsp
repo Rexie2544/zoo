@@ -11,26 +11,25 @@
 <h1>${title}</h1>
 <div class="container">
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
-    <input type="button" value="เพิ่มร้านค้า"
-           onclick="window.location.href='${pageContext.request.contextPath}/shop/create'; return false;"
+    <input type="button" value="เพิ่มรถราง"
+           onclick="window.location.href='${pageContext.request.contextPath}/tram/create'; return false;"
            class="add-button"
     />
     <table>
         <thead>
         <tr>
-            <th>รหัสสินค้า</th><th>ชื่อสินค้า</th><th>เจ้าของร้าน</th><th>Latitude</th><th>Longitude</th><th>จำนวนสินค้า</th>
+            <th>รหัสรถราง</th><th>จุดเริ่มต้น</th><th>จุดสิ้นสุด</th><th>เวลาขนส่ง</th><th>จำนวนสัตว์</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="shop" items="${shops}">
+        <c:forEach var="tram" items="${trams}">
             <tr>
-                <td><a href="${pageContext.request.contextPath}/shop/${shop.id}/update">
-                        ${shop.code}</a></td>
-                <td>${shop.name}</td>
-                <td>${shop.owner}</td>
-                <td>${shop.latitude}</td>
-                <td>${shop.longitude}</td>
-                <td>${fn:length(shop.products)}</td>
+                <td><a href="${pageContext.request.contextPath}/tram/${tram.id}/update">
+                        ${tram.tramID}</a></td>
+                <td>${tram.parking}</td>
+                <td>${tram.route}</td>
+                <td>${tram.timef} - ${tram.timel}</td>
+                <td>${fn:length(tram.animals)}</td>
             </tr>
         </c:forEach>
         </tbody>
