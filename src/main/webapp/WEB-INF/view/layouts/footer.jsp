@@ -1,5 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<style>
+    *{
+        font-family: Kanit;
+    }
+</style>
 <footer>
     <br>
-    &copy Copyright Lesson09 Tanakorn Wonglangka Spring MVC.
+    <center>เว็บไซต์นี้แสดงผลดีที่สุดบน Google Chrome 60.0.3112.114 แสดงผลได้ทุกขนาดหน้าจอ</center>
+    <hr/>
+    <center>สวนสัตว์เชียงใหม่ 100 ถนน ห้วยแก้ว เชียงใหม่, อำเภอเมืองเชียงใหม่ เชียงใหม่ 50200 อีเมล์ : chiangmaizoomail@yahoo.com
+        นโยบายเว็บไซต์นโยบายการคุ้มครองข้อมูลส่วนบุคคลการปฏิเสธการรับผิดชอบนโยบายการรักษาความมั่นคงปลอดภัยของเว็บไซต์
+        สงวนลิขสิทธิ์ 2559 - สวนสัตว์ดุสิต | ผู้เข้าชมเว็บไซต์ : 1412070</center>
 </footer>

@@ -4,10 +4,11 @@
     <title>หน้าหลัก </title>
 </head>
 <body>
-<h1>Spring MVC Hibernate - หน้าหลัก</h1>
+<center><h1>Chiang Mai - Zoo</h1>
 <div class="container">
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
 </div>
+</center>
 <jsp:include page="/WEB-INF/view/layouts/footer.jsp"/>
 </body>
 </html>

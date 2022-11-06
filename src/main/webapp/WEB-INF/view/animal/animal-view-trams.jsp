@@ -10,28 +10,28 @@
 <div id="header"><h1>${title}</h1></div>
 <div class="container">
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
-    <input type="button" value="เพิ่มร้านค้า"
+    <input type="button" value="เพิ่มสัตว์"
            onclick="window.location.href=
-                   '${pageContext.request.contextPath}/product/${product.id}/shop/add';
+                   '${pageContext.request.contextPath}/animal/${animal.id}/tram/add';
                    return false;"
            class="add-button"
     />
     <table class="table-bordered">
         <thead>
         <tr>
-            <th>รหัสร้านค้า</th><th>ชื่อร้านค้า</th><th>ชื่อเจ้าของ</th><th>Action</th>
+            <th>รหัสรถราง</th><th>จุดเริ่มต้น</th><th>จุดสิ้นสุด</th><th>Action</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="shop" items="${shops}">
+        <c:forEach var="tram" items="${trams}">
             <tr>
                 <td class="center">
-                    <a href="${pageContext.request.contextPath}/shop/${shop.id}/update">${shop.code}</a>
+                    <a href="${pageContext.request.contextPath}/tram/${tram.id}/update">${tram.tramID}</a>
                 </td>
-                <td>${shop.name}</td>
-                <td>${shop.owner}</td>
+                <td>${tram.parking}</td>
+                <td>${tram.route}</td>
                 <td class="center"><a
-                        href="${pageContext.request.contextPath}/product/${product.id}/shop/${shop.id}/remove">ลบ</a></td>
+                        href="${pageContext.request.contextPath}/animal/${animal.id}/tram/${tram.id}/remove">ลบ</a></td>
             </tr>
         </c:forEach>
         </tbody>
