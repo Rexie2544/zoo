@@ -10,23 +10,23 @@
 <div id="header"><h1>${title}</h1></div>
 <div class="container">
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
-    <form action ="${pageContext.request.contextPath}/product/${product.id}/shop/add" method="post">
+    <form action ="${pageContext.request.contextPath}/animal/${animal.id}/tram/add" method="post">
         <table class="table-bordered">
             <thead>
             <tr>
-                <th>รหัสร้านค้า</th><th>ชื่อร้านค้า</th><th>ชื่อเจ้าของ</th><th>Action</th>
+                <th>รหัสรถราง</th><th>จุดเริ่มต้น</th><th>จุดสิ้นสุด</th><th>Action</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="shop" items="${shops}">
+            <c:forEach var="tram" items="${trams}">
                 <tr>
                     <td class="center">
-                        <a href="${pageContext.request.contextPath}/shop/${shop.id}/update">${shop.code}</a>
+                        <a href="${pageContext.request.contextPath}/tram/${tram.id}/update">${tram.tramID}</a>
                     </td>
-                    <td>${shop.name}</td>
-                    <td>${shop.owner}</td>
+                    <td>${tram.parking}</td>
+                    <td>${tram.route}</td>
                     <td class="center">
-                        <button type="submit" name="shop" value="${shop.id}"> เพิ่ม </button>
+                        <button type="submit" name="tram" value="${tram.id}"> เพิ่ม </button>
                     </td>
                 </tr>
             </c:forEach>

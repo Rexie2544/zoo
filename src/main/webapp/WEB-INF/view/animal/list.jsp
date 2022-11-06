@@ -11,29 +11,28 @@
 <h1>${title}</h1>
 <div class="container">
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
-    <input type="button" value="เพิ่มสินค้า"
-           onclick="window.location.href='${pageContext.request.contextPath}/product/create'; return false;"
+    <input type="button" value="เพิ่มสัตว์"
+           onclick="window.location.href='${pageContext.request.contextPath}/animal/create'; return false;"
            class="add-button"
     />
     <table class="table-bordered">
         <thead>
         <tr>
-            <th>รหัสสินค้า</th>
-            <th>ชื่อสินค้า</th>
-            <th>ราคา</th>
-            <th>จํานวนร้านค้า</th>
+            <th>รหัสสัตว์</th>
+            <th>ชื่อไทย</th>
+            <th>ชื่ออังกฤษ</th>
+            <th>ชื่อวิทยาศาสตร์</th>
+            <th>จำนวนรถราง</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="product" items="${products}">
+        <c:forEach var="animal" items="${animals}">
             <tr><td>
-                <a href="${pageContext.request.contextPath}/product/${product.id}/update">${product.code}</a></td>
-                <td>${product.name}</td>
-                <td class="number">
-                    <fmt:formatNumber type="number" pattern="###,###.00"
-                                      value="${product.price}"/>
-                </td>
-                <td class="center">${fn:length(product.shops)}</td>
+                <a href="${pageContext.request.contextPath}/product/${animal.id}/update">${animal.animalID}</a></td>
+                <td>${animal.nameTH}</td>
+                <td class="center">${(animal.nameEN)}</td>
+                <td class="center">${(animal.nameSC)}</td>
+                <td class="center">${fn:length(animal.trams)}</td>
             </tr>
         </c:forEach>
         </tbody>
