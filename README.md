@@ -145,3 +145,4 @@ insert into animals_tram value(15,7);
 insert into animals_tram value(16,7);
 insert into animals_tram value(8,8);
 SELECT * FROM animals_tram;
+.
