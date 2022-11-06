@@ -93,7 +93,7 @@ public class AnimalController {
     public String showTramForAdd(@PathVariable("id") int id, Model model) {
         Animal animal = animalService.getAnimal(id);
         List<Tram> trams = animalService.getTramDoesNotHaveAnimal(id);
-        model.addAttribute("title", "เพิ$มร้านค้า");
+        model.addAttribute("title", "เพิ่มร้านค้า");
         model.addAttribute("animal", animal);
         model.addAttribute("trams", trams);
         return "animal/tram-list";
@@ -108,7 +108,7 @@ public class AnimalController {
 
     @GetMapping("/{id}/tram/{tram}/remove")
     public String animalRemoveTram(@PathVariable("id") int animalId,
-                                    @PathVariable("shop") int tramId) {
+                                    @PathVariable("tram") int tramId) {
         animalService.removeTramFromAnimal(animalId, tramId);
         return "redirect:/animal/" + animalId + "/view-trams";
     }

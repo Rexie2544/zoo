@@ -28,7 +28,7 @@
         <tbody>
         <c:forEach var="animal" items="${animals}">
             <tr><td>
-                <a href="${pageContext.request.contextPath}/product/${animal.id}/update">${animal.animalID}</a></td>
+                <a href="${pageContext.request.contextPath}/animal/${animal.id}/update">${animal.animalID}</a></td>
                 <td>${animal.nameTH}</td>
                 <td class="center">${(animal.nameEN)}</td>
                 <td class="center">${(animal.nameSC)}</td>

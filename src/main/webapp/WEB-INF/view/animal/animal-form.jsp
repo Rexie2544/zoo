@@ -69,7 +69,7 @@
                     <td>
                         <form:select path="animalType.typeID">
                             <form:option value="" label="-- กรุณาเลือกประเภท --"/>
-                            <form:options items="${animalType}" itemLabel="nameType"
+                            <form:options items="${animaltypes}" itemLabel="nameType"
                                           itemValue="typeID"/>
                         </form:select>
                         <form:errors path="animalType.typeID" cssClass="error"/>
