@@ -17,17 +17,17 @@
     <center>
         <div id="container">
             <div id="header"><h1>${title}</h1></div>
-            <i>กรอกข้อมูลในฟอร์ม. เครื่องหมายดอกจัน (*) หมายถึงห้ามว่าง</i><br><br>
+            <i>กรอกข้อมูลในฟอร์ม. เครื่องหมายดอกจัน <b style="color: red">(*)</b> หมายถึงห้ามว่าง</i><br><br>
             <form:form action="${pageContext.request.contextPath}/tram/save " modelAttribute="tram" method="POST">
                 <form:hidden path="id"/>
-                <table>
+                <table class="ifinput">
                     <colgroup>
                         <col style="width: 160px;">
                         <col style="width: auto;">
                     </colgroup>
                     <tbody>
                     <tr>
-                        <td><label>รหัสรถราง</label></td>
+                        <td><label>รหัสรถราง <b style="color: red">*</b></label></td>
                         <td><form:input path="tramID"/>
                             <form:errors path="tramID" cssClass="error" style="color:red"/>
                         </td>
@@ -46,28 +46,28 @@
                     </tr>
                     <tr>
                         <td><label>เวลาเริ่มทำงาน</label></td>
-                        <td><form:input path="timef" cssClass="number"/>
+                        <td><form:input path="timef" cssClass="number" alt="7.30 น."/>
                             <form:errors path="timef" cssClass="error" style="color:red"/>
                         </td>
                     </tr>
                     <tr>
                         <td><label>เวลาเลิกงาน</label></td>
-                        <td><form:input path="timel" cssClass="number"/>
+                        <td><form:input path="timel" cssClass="number" alt="16.30 น."/>
                             <form:errors path="timel" cssClass="error" style="color:red"/>
                         </td>
                     </tr>
                     <tr>
                         <td><label></label></td>
                         <td>
-                            <input type="submit" value="บันทึก" class="save-button"/>
+                            <input type="submit" value="บันทึก" class="save-button" style="height: 45px;color: white"/>
                             <input type="button" value="ลบ"
                                    onclick="if((confirm('คูณแน่ใจหรือว่าต้องการลบรถรางนี้ ?'))) {
                                            window.location.href='${pageContext.request.contextPath}/tram/${tram.id}/delete'; return false; }"
-                                   class="cancel-button" style="background-color: red"
+                                   class="cancel-button" style="background-color: red;height: 45px;color: white"
                             />
                             <input type="button" value="ยกเลิก"
                                    onclick="window.location.href='${pageContext.request.contextPath}/tram/list'; return false;"
-                                   class="cancel-button" style="background-color: #162434;color: white"
+                                   class="cancel-button" style="background-color: #162434;color: white;height: 45px"
                             />
                             <c:if test="${tram.id > 0}">
                                 <input type="button" value="แสดงร้านค้า"

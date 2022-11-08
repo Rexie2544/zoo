@@ -82,11 +82,11 @@
                     <tr>
                         <td><label></label></td>
                         <td style="width: 40px">
-                            <input type="submit" value="บันทึก" class="save-button" style="height: 45px"/>
+                            <input type="submit" value="บันทึก" class="save-button" style="height: 45px;color: white"/>
                             <input type="button" value="ลบ"
                                    onclick="if((confirm('คูณแน่ใจหรือว่าต้องการลบสัตว์ตัวนี้ ?'))) {
                                            window.location.href='${pageContext.request.contextPath}/animal/${animal.id}/delete'; return false; }"
-                                   class="delete-button" style="height: 45px ;background-color: red"
+                                   class="delete-button" style="height: 45px ;background-color: red;color: white"
                             />
                             <input type="button" value="ยกเลิก"
                                    onclick="window.location.href='${pageContext.request.contextPath}/animal/list'; return false;"
