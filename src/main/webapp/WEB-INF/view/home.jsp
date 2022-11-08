@@ -15,7 +15,10 @@
     <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/Log-in1.png" style="height: 80%"></center>
 </div>
     <div style="width: 100%;float: left">
-        <center><img src="${pageContext.request.contextPath}/assets/img/zoo.png" style="width: 500px"></center>
+        <center><img src="${pageContext.request.contextPath}/assets/img/Home.jpg" style="width: 500px"></center>
+    </div>
+    <div style="width: 100%;float: left">
+        <center><img src="${pageContext.request.contextPath}/assets/img/MAP.png" style="width: 500px"></center>
     </div>
 </center>
 

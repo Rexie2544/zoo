@@ -10,7 +10,7 @@
 
     <ul>
         <li>
-                <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/Log-in1.png" style="height: 60px;margin-top: -20px"></center>
+                <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/LOGO.png" style="height: 60px;margin-top: -20px"></center>
         </li>
         <li><a><h3>Chiang Mai - Zoo</h3></a></li>
         <li class ="Home-padding"><a href="${pageContext.request.contextPath}">หน้าหลัก</a></li>

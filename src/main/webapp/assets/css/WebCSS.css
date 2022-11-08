@@ -15,7 +15,7 @@ html, body{
 }
 
 .nav ul li{
-    padding: 40px 22px;
+    padding: 40px;
     font-size:20px ;
     list-style-type: none;
     overflow: hidden;
@@ -37,27 +37,6 @@ html, body{
     text-decoration: none;
 }
 
-.nav ul li h3{
-    padding: -20px;
-    padding-left: 20px;
-    margin: -5px;
-    margin-left: -40px;
-    font-size:30px ;
-    list-style-type: none;
-    float: left;
-}
-.nav ul li h4{
-    padding: -15px;
-    padding-left: 20px;
-    margin: -5px;
-    font-size:25px;
-    margin-left: -40px;
-    list-style-type: none;
-    float: left;
-}
-.nav ul li h3:hover{
-    color:white;
-}
 .nav ul li a:hover{
     color: #75D5FD;
     text-decoration: overline;
