@@ -27,10 +27,11 @@ public class Tram {
     @NotNull
     @Column(name = "timef",length = 10)
     private String timef;
-
+    @NotNull
     @Column(name = "timel",length = 10)
     private String timel;
 
+    @NotNull
     @Column(name = "parking",length = 2)
     private String parking;
 

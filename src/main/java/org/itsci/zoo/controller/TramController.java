@@ -38,7 +38,7 @@ public class TramController {
     public String processForm(@Valid @ModelAttribute("tram") Tram tram,
                               BindingResult bindingResult, Model model){
         if (bindingResult.hasErrors()) {
-            model.addAttribute("title", "มีข้อผิดพลาดในการบนัทึก" + title);
+            model.addAttribute("title", "มีข้อผิดพลาดในการบันทึก" + title);
             return "tram/tram-form";
         } else {
             Tram tramEntity = tramService.getTram(tram.getId());
@@ -68,7 +68,7 @@ public class TramController {
     @GetMapping("/{id}/view-animals")
     public String tramViewAnimal(@PathVariable("id") int id, Model model) {
         Tram tram = tramService.getTram(id);
-        model.addAttribute("title", title + " - รายการร้านค้า");
+        model.addAttribute("title", title + " - รายการสัตว์");
         model.addAttribute("tram", tram);
         model.addAttribute("animals", tram.getAnimals());
         return "tram/tram-view-animals";

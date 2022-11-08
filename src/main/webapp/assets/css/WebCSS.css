@@ -3,6 +3,7 @@ html, body{
     padding:0px;
     margin: 0px;
     font-family: Tahoma,Verdana,Segoe,sans-serif;
+    background-color: #fff4ec;
 }
 
 .nav{
@@ -46,6 +47,10 @@ html, body{
     list-style-type: none;
     float: left;
 }
+input {
+    padding: 10px;
+    font-size: 16px;
+}
 .nav ul li h4{
     padding: -15px;
     padding-left: 20px;
@@ -69,12 +74,20 @@ input{
     height: 45px;
 }
 
-.submit{
+.submit,.add-button{
     border-radius: 40px;
     width: 200px;
     height: 45px;
     background-color: #162434;
     color: white;
+}
+
+.submit:hover,.add-button:hover{
+    border-radius: 40px;
+    width: 200px;
+    height: 45px;
+    background-color: #EAB604;
+    color: #162434;
 }
 
 footer{
@@ -103,4 +116,73 @@ footer{
     text-align: center;
     margin: 20px 0px 0px -20px;
 
+}
+.table-bordered{
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: antiquewhite;
+    border: 3px #162434 solid;
+}
+
+.table-bordered a{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #162434;
+    color: white;
+    text-decoration: none;
+}
+.table-bordered tr{
+    margin: 5px;
+    padding: 5px;
+    height: 40px;
+}
+
+.table-bordered a:hover{
+    margin: 5px;
+    padding: 5px;
+    height: 40px;
+    background-color: #EAB604;
+
+}
+
+.table-bordered tr th{
+    color: white;
+    background-color: #162434;
+}
+
+.ifinput input {
+    padding: 5px;
+    height: 20px;
+    font-size: 16px;
+}
+
+.save-button,.cancel-button,.delete-button{
+    width: 100px;
+    height: 45px;
+    background-color: green;
+    border: none;
+}
+.save-button:hover,.cancel-button:hover,.delete-button:hover{
+    width: 100px;
+    height: 45px;
+    background-color: #EAB604;
+    border: none;
+    cursor: pointer;
+}
+.cancel-button:hover{
+    width: 100px;
+    height: 45px;
+    background-color: #EAB604;
+    border: none;
+    cursor: pointer;
+}
+.delete-button:hover{
+    width: 100px;
+    height: 45px;
+    background-color: #EAB604;
+    border: none;
+    cursor: pointer;
 }

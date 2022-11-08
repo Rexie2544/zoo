@@ -8,13 +8,14 @@
     <link href="${pageContext.request.contextPath}/assets/css/WebCSS.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1>${title}</h1>
 <div class="container">
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
-    <input type="button" value="เพิ่มสัตว์"
-           onclick="window.location.href='${pageContext.request.contextPath}/animal/create'; return false;"
-           class="add-button"
-    />
+    <center>
+        <h1>${title}</h1>
+        <input type="button" value="เพิ่มสัตว์"
+               onclick="window.location.href='${pageContext.request.contextPath}/animal/create'; return false;"
+               class="add-button"/>
+
     <table class="table-bordered">
         <thead>
         <tr>
@@ -37,6 +38,7 @@
         </c:forEach>
         </tbody>
     </table>
+    </center>
 </div>
 <jsp:include page="/WEB-INF/view/layouts/footer.jsp"/>
 </body>

@@ -14,28 +14,31 @@
 </div>
 <center>
 
-<div style="width: 100%;float: left ;background-color: #75D5FD">
+<div style="width: 100%;float: left">
     <div>
-        <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/Log-in1.png" style="height: 80%"></center>
+        <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/z.jpg" style="height: 80%"></center>
     </div>
     <div><center>
-        <br><br>
+        <br><br>  <br><br>  <br><br><br>  <br>
         <h2>ยินดีต้อนรับเข้าสู่</h2>
         <h1>สวนสัตว์เชียงใหม่</h1>
         <p>เว็บไซต์นี้เป็นเว็บไซต์สำหรับนำทางให้กับผู้ที่สนใจท่องเที่ยวในส่วนสัตว์เชียงใหม่
        สวนสัตว์เชียงใหม่ องค์การสวนสัตว์แห่งประเทศไทยในพระบรมราชูถัมภ์  กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม</p>
     </center></div>
 </div>
-    <div style="width: 100%;float: left">
+    <div style="width: 100%;float: left;">
         <h1>แผนที่สวนสัตว์เชียงใหม่</h1>
         <div style="width: 100%">
             <center><img src="${pageContext.request.contextPath}/assets/img/MAP.png" style="width: 60%"></center>
         </div>
+            <h2>ข้อมูลรถราง</h2>
         <div>
             <c:forEach var="tram" items="${trams}">
+                <div style="width: 25%;float: left">
 
-                <p> <b> รถรางสาย :</b> ${tram.tramID}<br>
-                    <b>เวลา : </b> ${tram.timef} - ${tram.timel}</p>
+                    <p> <b> รถรางสาย :</b> ${tram.tramID}<br>
+                        <b>เวลา : </b> ${tram.timef} - ${tram.timel}</p>
+                </div>
 
             </c:forEach>
         </div>
@@ -51,7 +54,7 @@
                     <div style="width: 45%;float: left;margin: 10px ;margin-left: 50px">
                         <table>
                             <tr style="height: 325px">
-                                <td><img src="${pageContext.request.contextPath}/assets/img/MAP.png" style="width: 200px ;margin: 5px;"></td>
+                                <td><img src="${pageContext.request.contextPath}/assets/img/${(animal.animalID)}.jpg" style="width: 200px ;margin: 5px;"></td>
                                 <td>
                                     <p><b>ชื่อไทย : </b>${animal.nameTH}
                                         <br><b>ชื่อภาษาอังกฤษ : </b>${(animal.nameEN)}
