@@ -12,7 +12,16 @@
 <center>
 
 <div style="width: 100%;float: left">
-    <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/Log-in1.png" style="height: 80%"></center>
+    <div>
+        <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/Log-in1.png" style="height: 80%"></center>
+    </div>
+    <div><center>
+        <br><br>
+        <h2>ยินดีต้อนรับเข้าสู่</h2>
+        <h1>สวนสัตว์เชียงใหม่</h1>
+        <p>เว็บไซต์นี้เป็นเว็บไซต์สำหรับนำทางให้กับผู้ที่สนใจท่องเที่ยวในส่วนสัตว์เชียงใหม่
+       สวนสัตว์เชียงใหม่ องค์การสวนสัตว์แห่งประเทศไทยในพระบรมราชูถัมภ์  กระทรวงทรัพยากรธรรมชาติและสิ่งแวดล้อม</p>
+    </center></div>
 </div>
     <div style="width: 100%;float: left">
         <center><img src="${pageContext.request.contextPath}/assets/img/Home.jpg" style="width: 500px"></center>
