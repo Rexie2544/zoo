@@ -1,0 +1,85 @@
+
+html, body{
+    padding:0px;
+    margin: 0px;
+    font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+
+.nav{
+    background-color: #162434;
+    width: 100%;
+    height: 15%;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.nav ul li{
+    padding: 40px;
+    font-size:20px ;
+    list-style-type: none;
+    overflow: hidden;
+    float: left;
+
+
+}
+
+.Home-padding{
+    margin: 0px 0px 0px 250px;
+}
+.User-padding{
+    margin: 0px 0px 0px 350px;
+}
+
+.nav ul li a{
+    font-family: Kanit, sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.nav ul li a:hover{
+    color: #75D5FD;
+    text-decoration: overline;
+}
+
+input{
+    border-radius: 40px;
+    width: 200px;
+    height: 45px;
+}
+
+.submit{
+    border-radius: 40px;
+    width: 200px;
+    height: 45px;
+    background-color: #162434;
+    color: white;
+}
+
+footer{
+    background-color: #162434;
+    width: 100%;
+    height: 15%;
+    padding: 0px;
+    margin: 150px 0px 0px 0px;
+    color: white;
+    font-family: Kanit,sans-serif;
+}
+.mar-log{
+
+    padding: 180px 0px 0px 0px;
+
+}
+
+.log-fl{
+    float: left;
+    margin: 0px;
+
+
+
+}
+.Login{
+    text-align: center;
+    margin: 20px 0px 0px -20px;
+
+}

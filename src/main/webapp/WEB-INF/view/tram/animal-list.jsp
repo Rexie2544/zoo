@@ -6,7 +6,7 @@
 <html>
 <head>
   <title>${title}</title>
-  <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="${pageContext.request.contextPath}/assets/css/WebCSS.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="header"><h1>${title}</h1></div>

@@ -2,12 +2,16 @@
 <html>
 <head>
     <title>หน้าหลัก </title>
+    <link href="${pageContext.request.contextPath}/assets/css/WebCSS.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<center><h1>Chiang Mai - Zoo</h1>
-<div class="container">
+<div>
+<center>
     <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
 </div>
+    <div>
+        <center><img src="${pageContext.request.contextPath}/assets/img/zoo.png" style="width: 500px"></center>
+    </div>
 </center>
 <jsp:include page="/WEB-INF/view/layouts/footer.jsp"/>
 </body>

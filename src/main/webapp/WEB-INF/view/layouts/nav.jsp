@@ -3,19 +3,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <form:form action="${pageContext.request.contextPath}/logout" method="POST" name="frmLogout"></form:form>
 
-<style>
-    .navzoo ul li{
-        padding: 0px 40px 20px 20px ;
-        font-size:20px ;
-    }
-</style>
 <head>
-    <link href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="${pageContext.request.contextPath}/assets/css/WebCSS.css" rel="stylesheet" type="text/css">
 </head>
-<nav class="navzoo">
+<nav class="nav">
 
     <ul>
-        <li ><a href="${pageContext.request.contextPath}">หน้าหลัก</a></li>
+        <li><a>Chiang Mai - Zoo</a></li>
+        <li class ="Home-padding"><a href="${pageContext.request.contextPath}">หน้าหลัก</a></li>
 
 
         <security:authorize access="hasRole('MANAGER')">
@@ -38,6 +33,8 @@
             </li>
         <li><a href="#" onclick="javascript: frmLogout.submit();">ลงชื่อออกจากระบบ</a></li>
         </security:authorize>
+
+        <li class ="User-padding"><a>ADMIN</a></li>
 
     </ul>
 </nav>
