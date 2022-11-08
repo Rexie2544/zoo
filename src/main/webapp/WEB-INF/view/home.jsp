@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
     <title>หน้าหลัก </title>
@@ -11,7 +14,7 @@
 </div>
 <center>
 
-<div style="width: 100%;float: left">
+<div style="width: 100%;float: left ;background-color: #75D5FD">
     <div>
         <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/Log-in1.png" style="height: 80%"></center>
     </div>
@@ -24,10 +27,44 @@
     </center></div>
 </div>
     <div style="width: 100%;float: left">
-        <center><img src="${pageContext.request.contextPath}/assets/img/Home.jpg" style="width: 500px"></center>
-    </div>
-    <div style="width: 100%;float: left">
-        <center><img src="${pageContext.request.contextPath}/assets/img/MAP.png" style="width: 500px"></center>
+        <h1>แผนที่สวนสัตว์เชียงใหม่</h1>
+        <div style="width: 100%">
+            <center><img src="${pageContext.request.contextPath}/assets/img/MAP.png" style="width: 60%"></center>
+        </div>
+        <div>
+            <c:forEach var="tram" items="${trams}">
+
+                <p> <b> รถรางสาย :</b> ${tram.tramID}<br>
+                    <b>เวลา : </b> ${tram.timef} - ${tram.timel}</p>
+
+            </c:forEach>
+        </div>
+        <div style="width: 100%">
+            <thead>
+
+                <h2>ข้อมูลสัตว์</h2>
+
+            </thead>
+            <tbody>
+
+            <c:forEach var="animal" items="${animals}" >
+                    <div style="width: 45%;float: left;margin: 10px ;margin-left: 50px">
+                        <table>
+                            <tr style="height: 325px">
+                                <td><img src="${pageContext.request.contextPath}/assets/img/MAP.png" style="width: 200px ;margin: 5px;"></td>
+                                <td>
+                                    <p><b>ชื่อไทย : </b>${animal.nameTH}
+                                        <br><b>ชื่อภาษาอังกฤษ : </b>${(animal.nameEN)}
+                                        <br><b>ชื่อวิทยาศาสตร์ : </b>${(animal.nameSC)}
+                                        <br><b>รายละเอียด : </b>${(animal.details)}
+                                        <br><b>อาหารที่ชอบ : </b>${(animal.food)}</p><br>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+            </c:forEach>
+            </tbody>
+        </div>
     </div>
 </center>
 
