@@ -9,10 +9,11 @@
 <nav class="nav">
 
     <ul>
-        <li><a>Chiang Mai - Zoo</a></li>
+        <li>
+                <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/Log-in1.png" style="height: 60px;margin-top: -20px"></center>
+        </li>
+        <li><a><h3>Chiang Mai - Zoo</h3></a></li>
         <li class ="Home-padding"><a href="${pageContext.request.contextPath}">หน้าหลัก</a></li>
-
-
         <security:authorize access="hasRole('MANAGER')">
         <li><a href="${pageContext.request.contextPath}/animal/list">สัตว์</a></li>
         </security:authorize>
@@ -27,15 +28,11 @@
         </security:authorize>
 
         <security:authorize access="isAuthenticated()">
-            <li>
-                User: <security:authentication property="principal.username" />
-                Role (s): <security:authentication property="principal.authorities" />
-            </li>
         <li><a href="#" onclick="javascript: frmLogout.submit();">ลงชื่อออกจากระบบ</a></li>
+            <li>
+                <a><h4>[ <security:authentication property="principal.username" /> ]</h4></a>
+            </li>
         </security:authorize>
-
-        <li class ="User-padding"><a>ADMIN</a></li>
-
     </ul>
 </nav>
 <hr>

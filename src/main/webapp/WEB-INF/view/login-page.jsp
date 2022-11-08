@@ -5,6 +5,9 @@
 <head><title>${title}</title></head>
 <body>
 <div>
+    <jsp:include page="/WEB-INF/view/layouts/nav.jsp"/>
+</div>
+<div>
     <center><img class="log-fl" src="${pageContext.request.contextPath}/assets/img/Log-in1.png" style="height: 86%"></center>
 </div>
 <center><h1 class="mar-log">${title}</h1></center>
