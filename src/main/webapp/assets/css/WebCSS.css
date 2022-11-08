@@ -4,6 +4,7 @@ html, body{
     margin: 0px;
     font-family: Tahoma,Verdana,Segoe,sans-serif;
     background-color: #fff4ec;
+    transition: 2s;
 }
 
 .nav{

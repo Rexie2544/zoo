@@ -14,6 +14,7 @@
         </li>
         <li><a><h3>Chiang Mai - Zoo</h3></a></li>
         <li class ="Home-padding"><a href="${pageContext.request.contextPath}">หน้าหลัก</a></li>
+        <li><a href="#example" style="transition: 2s">Map-Zoo</a></li>
         <security:authorize access="hasRole('MANAGER')">
         <li><a href="${pageContext.request.contextPath}/animal/list">สัตว์</a></li>
         </security:authorize>

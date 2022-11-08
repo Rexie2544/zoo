@@ -29,7 +29,7 @@
 </div>
     <div style="width: 100%;float: left;">
         <h1>แผนที่สวนสัตว์เชียงใหม่</h1>
-        <div style="width: 100%">
+        <div style="width: 100%" id="example">
             <center><img src="${pageContext.request.contextPath}/assets/img/MAP.png" style="width: 60%;border-radius: 50px"></center>
         </div>
         <br>
