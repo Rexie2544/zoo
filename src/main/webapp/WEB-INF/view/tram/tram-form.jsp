@@ -70,7 +70,7 @@
                                    class="cancel-button" style="background-color: #162434;color: white;height: 45px"
                             />
                             <c:if test="${tram.id > 0}">
-                                <input type="button" value="แสดงร้านค้า"
+                                <input type="button" value="แสดงรถราง"
                                        onclick="window.location.href=
                                                '${pageContext.request.contextPath}/tram/${tram.id}/view-animals';
                                                return false;"

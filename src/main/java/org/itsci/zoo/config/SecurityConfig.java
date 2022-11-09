@@ -12,28 +12,12 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
-//    @Bean
-//    public UserDetailsService userDetailsService() {
-//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-//        manager.createUser(User.withUsername("john")
-//                .password("{noop}test123").roles("EMPLOYEE")
-//                .build());
-//        manager.createUser(User.withUsername("mary")
-//                .password("{noop}test123").roles("EMPLOYEE", "MANAGER")
-//                .build());
-//        manager.createUser(User.withUsername("susan")
-//                .password("{noop}test123").roles("EMPLOYEE", "ADMIN")
-//                .build());
-//        return manager;
-//    }
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http)throws Exception {
         http.authorizeRequests(configurer -> {
-            // configurer.anyRequest().authenticated();
             configurer.antMatchers("/animal/**").hasRole("MANAGER")
                     .antMatchers("/tram/**").hasRole("ADMIN");
-                    //.antMatchers("/user/**").hasRole("ADMIN");
         });
         http.formLogin(configurer -> {
                     try {

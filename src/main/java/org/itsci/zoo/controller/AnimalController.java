@@ -52,7 +52,7 @@ public class AnimalController {
     public String processForm(@Valid @ModelAttribute("animal") Animal animal,
                               BindingResult bindingResult, Model model){
         if (bindingResult.hasErrors()) {
-            model.addAttribute("title", "มีข้อผิดพลาดในการบนัทึก" + title);
+            model.addAttribute("title", "มีข้อผิดพลาดในการบันทึก" + title);
             model.addAttribute("animaltypes", animalTypeService.getAnimalTypes());
             return "animal/animal-form";
         } else {
